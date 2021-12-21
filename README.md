@@ -1,2 +1,3 @@
-# LazyFlow
-A python library to run DataFlow incrementally and lazily
+# Lazy Flow
+> Let's have fun!
+
