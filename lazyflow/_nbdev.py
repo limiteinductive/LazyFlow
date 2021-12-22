@@ -2,9 +2,10 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {}
+index = {"identity": "utils.ipynb",
+         "T": "utils.ipynb"}
 
-modules = []
+modules = ["utils.py"]
 
 doc_url = "//"
 
