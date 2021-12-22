@@ -6,14 +6,14 @@ __all__ = ['Flow']
 from returns.pipeline import flow
 from returns.maybe import Maybe
 
-#from ..lazyflow.utils import identity
+from .utils import identity
 
 class Flow:
 
-    def __init__(self, input=Maybe, functions=Maybe, outputs=Maybe):
+    def __init__(self, input=Maybe, functions=identity, outputs=Maybe):
         self.input = input
-        self.functions = functions
-        self.output = outputs
+        self.functions = listify(functions)
+        self.outputs = outputs
 
 
     def __call__(self, input=None):
@@ -22,8 +22,16 @@ class Flow:
             return flow(input, self.functions)
 
         self.outputs = flow(self.input, self.functions)
-
         return self.outputs
+
+    def __rshift__(self, flow):
+
+        if self.outputs:
+            i = self.outputs
+        else:
+            i = self()
+
+        return Flow(self.input, self.functions+flow.functions, flow.functions(i))
 
 
 
