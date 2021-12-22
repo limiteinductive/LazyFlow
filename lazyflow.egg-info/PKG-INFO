@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: lazyflow
+Version: 0.0.1
+Summary: A description of your project
+Home-page: https://github.com/limiteinductive/LazyFlow
+Author: Benjamin Trom
+Author-email: benjamintrom@gmail.com
+License: MIT License
+Keywords: some keywords
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+# Lazy Flow
+> Let's have fun!
+
+
+
